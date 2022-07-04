@@ -1,14 +1,15 @@
-package modExample1
+package myLogger
 
 import (
-	"fmt"
+	"log"
 )
 
-func main() {
-	Saludar("gil")
+func logInfo(message string) {
+	log.Println("INFO -", message)
 }
-
-func Saludar(nombre string) {
-
-	fmt.Println("hola ", nombre, ", como andas??")
+func logWarning(message string) {
+	log.Println("WARN -", message)
+}
+func logError(message string) {
+	log.Println("ERRO -", message)
 }
